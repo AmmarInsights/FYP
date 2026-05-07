@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quantum-IoT Security Dashboard | QAI-ZTA Framework</title>
+  <meta name="description" content="Integrating Quantum AI with IoT Security — Error-Resilient Models and Adaptive Zero-Trust Orchestration. FYP by Muhammad Ammar Ajmal & Muhammad Afnan, UMT Lahore." />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="scrollTo({top:0,behavior:'smooth'})">
+      <div class="nav-logo-box">
+        <div class="nav-logo-bg"></div>
+        <div class="nav-logo-inner">QAI</div>
+      </div>
+      <div>
+        <div class="nav-title">Quantum-IoT</div>
+        <div class="nav-sub">Security Framework</div>
+      </div>
+    </div>
+
+    <div class="nav-links">
+      <a href="#overview"     class="active">Overview</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#performance"> Performance</a>
+      <a href="#security">    Security</a>
+      <a href="#results">     Results</a>
+      <a href="#research">    Research</a>
+    </div>
+
+    <div class="nav-status">
+      <span class="dot"></span>
+      SYSTEM ACTIVE
+    </div>
+
+    <div id="hamburger" class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<div id="mobile-menu" class="mobile-menu" style="display:none">
+  <a href="#overview">     🏠 Overview</a>
+  <a href="#architecture"> 🏗 Architecture</a>
+  <a href="#performance">  📊 Performance</a>
+  <a href="#security">     🛡 Security</a>
+  <a href="#results">      🏆 Results</a>
+  <a href="#research">     🔬 Research</a>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     HERO / OVERVIEW
+══════════════════════════════════════════════════════════ -->
+<section id="overview">
+  <div id="hero" class="grid-bg">
+    <div class="hero-radial"></div>
+    <div class="hero-rings">
+      <div class="ring ring1"></div>
+      <div class="ring ring2"></div>
+      <div class="ring ring3"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Final Year Project &nbsp;·&nbsp; UMT Lahore &nbsp;·&nbsp; 2024
+      </div>
+
+      <h1 class="hero-title">
+        Integrating <span class="hl-blue">Quantum AI</span><br>
+        with IoT <span class="hl-green">Security</span> Framework
+      </h1>
+
+      <p class="hero-subtitle">
+        Error-Resilient Models &amp; Adaptive Zero-Trust Orchestration for Next-Generation IoT Networks
+      </p>
+
+      <p class="hero-authors">
+        Muhammad Ammar Ajmal (F2022376076) &nbsp;·&nbsp; Muhammad Afnan (F2022376028)
+      </p>
+
+      <div id="kpi-grid" class="kpi-grid"></div>
+
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="document.getElementById('performance').scrollIntoView({behavior:'smooth'})">
+          View Performance Results →
+        </button>
+        <button class="btn-secondary" onclick="document.getElementById('architecture').scrollIntoView({behavior:'smooth'})">
+          System Architecture
+        </button>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <span class="scroll-arrow">▼</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     ARCHITECTURE
+══════════════════════════════════════════════════════════ -->
+<section id="architecture" class="section">
+  <div class="container">
+    <span class="badge">System Design</span>
+    <h2 class="section-title">Quantum-Classical Hybrid Architecture</h2>
+    <p style="color:var(--q-400);max-width:640px;line-height:1.7;margin-bottom:40px">
+      A four-layer architecture integrating quantum hardware, classical AI, and zero-trust security
+      orchestration across fog, edge, and cloud tiers.
+    </p>
+
+    <!-- Architecture Layers -->
+    <div id="arch-layers" class="arch-layers"></div>
+
+    <!-- Data Flow -->
+    <div class="card p-6 mb-8">
+      <div class="chart-title">Data Flow: Zero-Trust Decision Pipeline</div>
+      <div class="dataflow">
+        <div class="df-step"><div class="df-box">IoT Packet Arrives</div><div class="df-num">Step 1</div></div>
+        <div class="df-arrow">→</div>
+        <div class="df-step"><div class="df-box">QKD Auth</div><div class="df-num">Step 2</div></div>
+        <div class="df-arrow">→</div>
+        <div class="df-step"><div class="df-box">VQC Classify</div><div class="df-num">Step 3</div></div>
+        <div class="df-arrow">→</div>
+        <div class="df-step"><div class="df-box">QBI Trust Score</div><div class="df-num">Step 4</div></div>
+        <div class="df-arrow">→</div>
+        <div class="df-step"><div class="df-box">Policy Engine</div><div class="df-num">Step 5</div></div>
+        <div class="df-arrow">→</div>
+        <div class="df-step"><div class="df-box last">Allow / Block / Isolate</div><div class="df-num">Step 6</div></div>
+      </div>
+    </div>
+
+    <!-- Tech Stack -->
+    <div class="chart-title mt-8 mb-4">Technology Stack</div>
+    <div id="tech-grid" class="tech-grid"></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     PERFORMANCE
+══════════════════════════════════════════════════════════ -->
+<section id="performance" class="section">
+  <div class="container">
+    <span class="badge">Model Evaluation</span>
+    <h2 class="section-title">Performance Metrics &amp; Analysis</h2>
+    <p style="color:var(--q-400);max-width:640px;line-height:1.7;margin-bottom:40px">
+      Comprehensive evaluation of quantum-classical hybrid models vs. classical baselines
+      on IoT intrusion detection using multiclass classification.
+    </p>
+
+    <!-- Model Comparison Table -->
+    <div class="card p-5 mb-6 ov-x">
+      <div class="chart-title">Model Comparison Table (Test Set)</div>
+      <table class="qtable">
+        <thead>
+          <tr>
+            <th>Model</th><th>Type</th><th>Accuracy</th><th>Balanced Acc</th>
+            <th>MCC</th><th>F1 Macro</th><th>F1 Weighted</th>
+            <th>ROC-AUC</th><th>PR-AUC</th><th>Train</th><th>Infer</th>
+          </tr>
+        </thead>
+        <tbody id="model-tbody"></tbody>
+      </table>
+    </div>
+
+    <!-- Charts Row 1 -->
+    <div class="grid-2 mb-6">
+      <div class="card p-5">
+        <div class="chart-title">Accuracy vs F1-Macro Comparison</div>
+        <div style="height:280px"><canvas id="chart-model-bar"></canvas></div>
+      </div>
+      <div class="card p-5">
+        <div class="chart-title">ROC Curves (Micro-Avg OVR)</div>
+        <div style="height:280px"><canvas id="chart-roc"></canvas></div>
+      </div>
+    </div>
+
+    <!-- K-Fold Table -->
+    <div class="card p-5 mb-6 ov-x">
+      <div class="chart-title">Stratified 5-Fold Cross Validation (Mean ± Std)</div>
+      <table class="qtable">
+        <thead>
+          <tr>
+            <th>Model</th><th>Mean F1</th><th>± Std F1</th>
+            <th>Mean Acc</th><th>± Std Acc</th><th>Variance</th>
+          </tr>
+        </thead>
+        <tbody id="kfold-tbody"></tbody>
+      </table>
+    </div>
+
+    <!-- Robustness Charts -->
+    <div class="grid-2">
+      <div class="card p-5">
+        <div class="chart-title">Robustness: Noise Injection Test</div>
+        <div class="chart-sub">Accuracy vs. Gaussian noise level</div>
+        <div style="height:240px"><canvas id="chart-noise"></canvas></div>
+      </div>
+      <div class="card p-5">
+        <div class="chart-title">Robustness: Missingness Injection Test</div>
+        <div class="chart-sub">Accuracy vs. missing data percentage</div>
+        <div style="height:240px"><canvas id="chart-missing"></canvas></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECURITY
+══════════════════════════════════════════════════════════ -->
+<section id="security" class="section">
+  <div class="container">
+    <span class="badge">Security Analysis</span>
+    <h2 class="section-title">Quantum Security Modules</h2>
+    <p style="color:var(--q-400);max-width:640px;line-height:1.7;margin-bottom:40px">
+      Analysis of Quantum Error Mitigation, Zero-Trust Orchestration, QKD key rates,
+      and class-wise anomaly detection performance.
+    </p>
+
+    <!-- QEM + Trust Timeline -->
+    <div class="grid-2 mb-6">
+      <div class="card p-5">
+        <div class="chart-title">⚡ Quantum Error Mitigation (QEM)</div>
+        <div class="chart-sub">VQC accuracy vs. qubit count: noisy vs. ZNE vs. readout vs. combined</div>
+        <div style="height:240px"><canvas id="chart-qem"></canvas></div>
+      </div>
+      <div class="card p-5">
+        <div class="chart-title">🛡 Zero-Trust Score &amp; Anomaly Timeline</div>
+        <div class="chart-sub">24-hr simulation: trust score drops under attack, QRL adapts policies</div>
+        <div style="height:240px"><canvas id="chart-trust"></canvas></div>
+      </div>
+    </div>
+
+    <!-- Class Dist + Feature Importance -->
+    <div class="grid-2 mb-6">
+      <div class="card p-5">
+        <div class="chart-title">📊 Dataset Class Distribution</div>
+        <div style="height:240px"><canvas id="chart-classdist"></canvas></div>
+        <div id="class-legend" class="legend mt-4"></div>
+      </div>
+      <div class="card p-5">
+        <div class="chart-title">🔒 Feature Importance (RF + Permutation)</div>
+        <div style="height:280px"><canvas id="chart-features"></canvas></div>
+      </div>
+    </div>
+
+    <!-- QKD + Latency + Scalability -->
+    <div class="grid-3">
+      <div class="card p-5">
+        <div class="chart-title">QKD Key Rate vs Distance</div>
+        <div style="height:200px"><canvas id="chart-qkd"></canvas></div>
+      </div>
+      <div class="card p-5">
+        <div class="chart-title">Latency: Classical vs Hybrid vs Quantum</div>
+        <div style="height:200px"><canvas id="chart-latency"></canvas></div>
+      </div>
+      <div class="card p-5">
+        <div class="chart-title">Scalability: CPU% vs Device Count</div>
+        <div style="height:200px"><canvas id="chart-scalability"></canvas></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     RESULTS
+══════════════════════════════════════════════════════════ -->
+<section id="results" class="section">
+  <div class="container">
+    <span class="badge">Key Findings</span>
+    <h2 class="section-title">Experimental Results &amp; Analysis</h2>
+    <p style="color:var(--q-400);max-width:640px;line-height:1.7;margin-bottom:40px">
+      Summary of experimental outcomes, per-class classification performance,
+      and confusion matrix for the best-performing Hybrid Quantum-Classical model.
+    </p>
+
+    <!-- Achievement cards -->
+    <div id="ach-cards" class="ach-cards"></div>
+
+    <!-- Confusion Matrix + Per-class Table -->
+    <div class="grid-2 mb-6">
+      <div class="card p-5 ov-x">
+        <div class="chart-title">Confusion Matrix — Hybrid Q-Classical (Best Model)</div>
+        <div id="conf-matrix-wrap" style="margin-top:8px"></div>
+        <div class="legend mt-4">
+          <div class="legend-item">
+            <div class="legend-dot" style="background:rgba(11,165,236,.65)"></div>
+            <span class="legend-lbl">Correct</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background:rgba(239,68,68,.35)"></div>
+            <span class="legend-lbl">Misclassified</span>
+          </div>
+        </div>
+      </div>
+      <div class="card p-5 ov-x">
+        <div class="chart-title">Per-Class Metrics — Hybrid Q-Classical</div>
+        <table class="qtable">
+          <thead>
+            <tr><th>Class</th><th>Precision</th><th>Recall</th><th>F1</th><th>Support</th></tr>
+          </thead>
+          <tbody id="perclass-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Per-class bar chart -->
+    <div class="card p-5 mb-6">
+      <div class="chart-title">Per-Class Precision / Recall / F1 — Hybrid Q-Classical</div>
+      <div style="height:220px"><canvas id="chart-perclass"></canvas></div>
+    </div>
+
+    <!-- System KPIs -->
+    <div class="card p-6">
+      <div class="chart-title mb-6">Live System KPIs (Simulation)</div>
+      <div id="kpi-summary" style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     RESEARCH
+══════════════════════════════════════════════════════════ -->
+<section id="research" class="section">
+  <div class="container">
+    <span class="badge">Academic Research</span>
+    <h2 class="section-title">Research Questions &amp; Contributions</h2>
+    <p style="color:var(--q-400);max-width:640px;line-height:1.7;margin-bottom:40px">
+      Key research contributions, experimental answers to proposed questions,
+      target beneficiaries, and future directions.
+    </p>
+
+    <!-- Research Questions -->
+    <div id="rq-cards" class="rq-cards"></div>
+
+    <!-- Key Contributions -->
+    <div class="card p-6 mb-6">
+      <div class="chart-title mb-6">🏆 Key Contributions</div>
+      <div id="contrib-grid" class="contrib-grid"></div>
+    </div>
+
+    <!-- Target Users + Future Work -->
+    <div class="grid-2 mb-6">
+      <div class="card p-5">
+        <div class="chart-title mb-4">👥 Target Users &amp; Beneficiaries</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div class="card p-4" style="background:rgba(11,165,236,.05)">
+            <div style="font-size:1.2rem;margin-bottom:6px">🏥</div>
+            <div style="font-family:var(--font-disp);font-size:.85rem;font-weight:700;color:#fff;margin-bottom:3px">Healthcare IoT</div>
+            <div style="font-size:.72rem;color:var(--q-400)">QBI + QFL for medical device security</div>
+          </div>
+          <div class="card p-4" style="background:rgba(11,165,236,.05)">
+            <div style="font-size:1.2rem;margin-bottom:6px">🏭</div>
+            <div style="font-family:var(--font-disp);font-size:.85rem;font-weight:700;color:#fff;margin-bottom:3px">Industrial IIoT</div>
+            <div style="font-size:.72rem;color:var(--q-400)">QAE + QRL for fault detection</div>
+          </div>
+          <div class="card p-4" style="background:rgba(11,165,236,.05)">
+            <div style="font-size:1.2rem;margin-bottom:6px">🏙️</div>
+            <div style="font-family:var(--font-disp);font-size:.85rem;font-weight:700;color:#fff;margin-bottom:3px">Smart City</div>
+            <div style="font-size:.72rem;color:var(--q-400)">QKD + QAOA for urban sensors</div>
+          </div>
+          <div class="card p-4" style="background:rgba(11,165,236,.05)">
+            <div style="font-size:1.2rem;margin-bottom:6px">🛡️</div>
+            <div style="font-family:var(--font-disp);font-size:.85rem;font-weight:700;color:#fff;margin-bottom:3px">Military / Defense</div>
+            <div style="font-size:.72rem;color:var(--q-400)">PQC + ZTSA for classified networks</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card p-5">
+        <div class="chart-title mb-4">🔬 Future Work &amp; Extensions</div>
+        <ul id="future-list" class="future-list"></ul>
+      </div>
+    </div>
+
+    <!-- Project Info -->
+    <div class="card p-6">
+      <div class="chart-title mb-6">📋 Project Information</div>
+      <div id="project-meta" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo-text">QAI-ZTA Security Framework</div>
+      <div class="footer-sub">FYP · Dept. of AI · University of Management and Technology, Lahore · 2024</div>
+    </div>
+    <div class="footer-links">
+      <a href="https://pennylane.ai" target="_blank">PennyLane ↗</a>
+      <a href="https://qiskit.org"   target="_blank">Qiskit ↗</a>
+      <a href="https://github.com"   target="_blank">GitHub ↗</a>
+    </div>
+  </div>
+  <p class="footer-copy">
+    All performance metrics are based on simulation using IBM Aer backends and IoT benchmark datasets.
+    © 2024 Muhammad Ammar Ajmal &amp; Muhammad Afnan · UMT Lahore
+  </p>
+</footer>
+
+
+<!-- Scripts (data first, then charts, then app) -->
+<script src="js/data.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
